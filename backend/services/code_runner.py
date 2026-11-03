@@ -20,7 +20,6 @@ from __future__ import annotations
 import base64
 import os
 import re
-import resource
 import shutil
 import signal
 import subprocess
@@ -126,10 +125,17 @@ def available_languages() -> dict[str, bool]:
     }
 
 
+try:  # POSIX only; on Windows the sandbox falls back to a timeout without rlimits
+    import resource
+except ImportError:  # pragma: no cover - exercised on Windows
+    resource = None  # type: ignore[assignment]
+IS_WINDOWS = os.name == "nt"
+
+
 @lru_cache(maxsize=1)
 def _netns_prefix() -> list[str]:
     """Use ``unshare -rn`` (new user + network namespace) when the kernel permits it."""
-    exe = shutil.which("unshare")
+    exe = shutil.which("unshare") if not IS_WINDOWS else None
     if not exe:
         return []
     try:
@@ -144,6 +150,9 @@ def network_isolation_mode() -> str:
 
 
 def _clean_env(workdir: str) -> dict[str, str]:
+    if IS_WINDOWS:  # Windows needs SYSTEMROOT and PATH to start any process
+        keep = {k: os.environ[k] for k in ("SYSTEMROOT", "PATH", "TEMP", "TMP") if k in os.environ}
+        return {**keep, "HOME": workdir, "PYTHONDONTWRITEBYTECODE": "1", "PYTHONIOENCODING": "utf-8"}
     return {"PATH": "/usr/local/bin:/usr/bin:/bin", "HOME": workdir, "LANG": "C.UTF-8",
             "PYTHONDONTWRITEBYTECODE": "1", "PYTHONIOENCODING": "utf-8"}
 
@@ -168,7 +177,7 @@ def _run(cmd: list[str], stdin: str, workdir: str, timeout: float, mem_mb: int |
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         env=_clean_env(workdir),
-        preexec_fn=_limits(int(timeout) + 1, mem_mb * 1024 * 1024 if mem_mb else None),
+        **({} if IS_WINDOWS else {"preexec_fn": _limits(int(timeout) + 1, mem_mb * 1024 * 1024 if mem_mb else None)}),
     )
     timed_out = False
     try:
@@ -176,7 +185,10 @@ def _run(cmd: list[str], stdin: str, workdir: str, timeout: float, mem_mb: int |
     except subprocess.TimeoutExpired:
         timed_out = True
         try:
-            os.killpg(proc.pid, signal.SIGKILL)
+            if IS_WINDOWS:
+                proc.kill()
+            else:
+                os.killpg(proc.pid, signal.SIGKILL)
         except (ProcessLookupError, PermissionError):
             proc.kill()
         out, err = proc.communicate()
@@ -184,7 +196,7 @@ def _run(cmd: list[str], stdin: str, workdir: str, timeout: float, mem_mb: int |
     stdout = out[:MAX_OUTPUT_BYTES].decode("utf-8", "replace")
     stderr = err[:MAX_OUTPUT_BYTES].decode("utf-8", "replace")
     mem = bool(re.search(r"MemoryError|bad_alloc|OutOfMemoryError|Cannot allocate memory", stderr))
-    if proc.returncode in (-signal.SIGXCPU, -signal.SIGKILL) and not timed_out:
+    if not IS_WINDOWS and proc.returncode in (-signal.SIGXCPU, -signal.SIGKILL) and not timed_out:
         timed_out = proc.returncode == -signal.SIGXCPU
     return ExecResult(stdout, stderr, proc.returncode if proc.returncode is not None else -1,
                       timed_out, runtime, mem)
