@@ -1,0 +1,34 @@
+# Slim set for Render free tier (512 MB): no torch/sentence-transformers/chromadb/faster-whisper.
+# Embeddings use the hashing fallback, vectors live in memory, and speech-to-text is unavailable.
+# --- Core app (backend + frontend). Versions are the ones the test-suite was run with; newer minors usually work.
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+sqlalchemy>=2.0
+pydantic>=2.7
+pydantic-settings>=2.3
+email-validator>=2.1
+httpx>=0.27
+python-dotenv>=1.0
+pyjwt>=2.8
+bcrypt>=4.1
+jinja2>=3.1
+pyyaml>=6.0
+# --- NLP / RAG / classic ML
+spacy>=3.7
+scikit-learn>=1.4
+scipy>=1.11
+numpy>=1.26
+pandas>=2.1
+joblib>=1.3
+# --- Documents, speech, reports
+pdfplumber>=0.11
+python-docx>=1.1
+reportlab>=4.0
+gTTS>=2.5
+# --- Frontend
+streamlit>=1.50
+streamlit-ace>=0.1.1
+plotly>=5.20
+# After installing, fetch the spaCy model (the app degrades gracefully without it):
+#   python -m spacy download en_core_web_sm
