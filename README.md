@@ -224,6 +224,7 @@ tests and a smoke execution of both notebooks (`PREPWISE_SMOKE=1`, offline).
 - `docker-compose.yml`: API + Streamlit locally.
 - `deploy/hf_space/`: Docker-based Hugging Face Space (single container, mock or secrets-based provider). See
   [`docs/huggingface_spaces.md`](docs/huggingface_spaces.md).
+- `render.yaml` + `deploy/render/Dockerfile`: one-click Render Blueprint (free tier, hash embeddings to fit 512 MB; untested here).
 - Model card: [`docs/model_card.md`](docs/model_card.md). Dataset card: [`data/DATASET_CARD.md`](data/DATASET_CARD.md).
 
 ---
