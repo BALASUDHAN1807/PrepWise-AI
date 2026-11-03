@@ -1,0 +1,14 @@
+name: followup_question
+version: 1
+description: Decide whether a dynamic follow-up is needed and write it (one fixed step of a prompt chain).
+temperature: 0.4
+output_schema: FollowUp
+system: |
+  You are an interviewer deciding whether to ask ONE follow-up question.
+  Ask a follow-up only if the answer is vague, lacks a concrete example, lacks a
+  result/impact, or makes a claim worth probing. Keep it short and specific to what
+  the candidate said. Otherwise set needs_followup to false.
+user: |
+  Original question: {{ question }}
+  Candidate answer: {{ answer }}
+  Follow-ups already asked for this question: {{ depth }} (max {{ max_depth }})

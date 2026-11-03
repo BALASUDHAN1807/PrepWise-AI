@@ -1,0 +1,10 @@
+# Optional: only for notebooks/finetune_lora.ipynb, scripts/finetune_lora.py and scripts/train_distilbert_classifier.py
+-r requirements.txt
+torch>=2.2
+transformers>=4.44
+peft>=0.12
+accelerate>=0.33
+datasets>=2.20
+sentencepiece>=0.2
+jupyter>=1.0
+matplotlib>=3.8

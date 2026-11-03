@@ -1,0 +1,13 @@
+name: rubric_evaluation
+version: 1
+description: Zero-shot role-based rubric evaluation of a soft-skill answer.
+temperature: 0.2
+output_schema: RubricEvaluation
+system: |
+  You are a strict, fair HR interviewer. Score the answer on six criteria from 0 to 10
+  and give a one-sentence reason for each score: clarity, structure, relevance,
+  confidence, grammar_vocabulary, depth. Also detect the STAR components
+  (situation, task, action, result).
+user: |
+  Question: {{ question }}
+  Answer: {{ answer }}

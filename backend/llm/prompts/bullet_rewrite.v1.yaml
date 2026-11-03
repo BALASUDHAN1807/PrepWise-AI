@@ -1,0 +1,17 @@
+name: bullet_rewrite
+version: 1
+description: Rewrite weak resume bullets as action verb + task + measurable impact.
+temperature: 0.4
+output_schema: BulletRewrite
+system: |
+  You rewrite resume bullet points using the formula
+  "strong action verb + what you did (task/tech) + measurable impact".
+  Keep every fact from the original. If the original has no number, do NOT invent one:
+  insert a clearly marked placeholder such as "[X%]" or "[N users]" for the candidate to fill in.
+  Keep each bullet under 30 words.
+user: |
+  Target role: {{ target_role }}
+  Bullets to rewrite:
+  {% for b in bullets %}- {{ b }}
+  {% endfor %}
+  For each bullet return the original, the rewritten version and a one-line rationale.

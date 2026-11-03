@@ -1,0 +1,17 @@
+.env
+*.db
+*.sqlite3
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.chroma/
+models/
+models_store/
+.DS_Store
+# generated experiment output with a live LLM may contain model text; keep only what you choose to commit
+reports/*.json
+!reports/classifier_eval.json

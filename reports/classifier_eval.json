@@ -1,0 +1,143 @@
+{
+  "n": 204,
+  "selected": "tfidf+features",
+  "variants": {
+    "length_only": {
+      "random_cv": {
+        "accuracy_mean": 0.6845,
+        "accuracy_std": 0.0427,
+        "f1_macro_mean": 0.671,
+        "folds": 15
+      },
+      "leave_questions_out": {
+        "accuracy": 0.6814,
+        "precision_macro": 0.6805,
+        "recall_macro": 0.6917,
+        "f1_macro": 0.6691,
+        "confusion_matrix": [
+          [
+            60,
+            7,
+            5
+          ],
+          [
+            33,
+            27,
+            12
+          ],
+          [
+            0,
+            8,
+            52
+          ]
+        ],
+        "labels": [
+          "poor",
+          "average",
+          "good"
+        ]
+      }
+    },
+    "tfidf_only": {
+      "random_cv": {
+        "accuracy_mean": 0.7355,
+        "accuracy_std": 0.0536,
+        "f1_macro_mean": 0.7317,
+        "folds": 15
+      },
+      "leave_questions_out": {
+        "accuracy": 0.7794,
+        "precision_macro": 0.7778,
+        "recall_macro": 0.775,
+        "f1_macro": 0.7762,
+        "confusion_matrix": [
+          [
+            65,
+            4,
+            3
+          ],
+          [
+            4,
+            52,
+            16
+          ],
+          [
+            0,
+            18,
+            42
+          ]
+        ],
+        "labels": [
+          "poor",
+          "average",
+          "good"
+        ]
+      }
+    },
+    "tfidf+features": {
+      "random_cv": {
+        "accuracy_mean": 0.9087,
+        "accuracy_std": 0.0498,
+        "f1_macro_mean": 0.9088,
+        "folds": 15
+      },
+      "leave_questions_out": {
+        "accuracy": 0.8922,
+        "precision_macro": 0.8933,
+        "recall_macro": 0.8944,
+        "f1_macro": 0.893,
+        "confusion_matrix": [
+          [
+            68,
+            4,
+            0
+          ],
+          [
+            9,
+            58,
+            5
+          ],
+          [
+            0,
+            4,
+            56
+          ]
+        ],
+        "labels": [
+          "poor",
+          "average",
+          "good"
+        ]
+      }
+    }
+  },
+  "holdout_selected": {
+    "accuracy": 0.8824,
+    "precision_macro": 0.8832,
+    "recall_macro": 0.8852,
+    "f1_macro": 0.8836,
+    "confusion_matrix": [
+      [
+        16,
+        2,
+        0
+      ],
+      [
+        1,
+        15,
+        2
+      ],
+      [
+        0,
+        1,
+        14
+      ]
+    ],
+    "labels": [
+      "poor",
+      "average",
+      "good"
+    ]
+  },
+  "note": "Small LLM-authored dataset in which length and structure strongly track the label (see the length_only baseline). Accuracy here does NOT show real-world interview-grading skill."
+}

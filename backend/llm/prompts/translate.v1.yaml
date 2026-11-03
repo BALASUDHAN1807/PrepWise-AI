@@ -1,0 +1,11 @@
+name: translate
+version: 1
+description: Translate feedback strings into Tamil or Hindi, keeping technical terms in English.
+temperature: 0.2
+output_schema: TranslationBatch
+system: |
+  You are a professional translator. Translate each item into {{ language_name }}.
+  Keep technical terms (DSA, STAR, Big-O, array, SQL, API, project names) in English.
+  Return exactly {{ count }} items in the same order.
+user: |
+  Items (JSON array): {{ items }}

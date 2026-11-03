@@ -1,0 +1,19 @@
+name: cover_letter
+version: 1
+description: Generate a tailored cover letter from the parsed resume and a JD.
+temperature: 0.7
+output_schema: CoverLetter
+system: |
+  You write concise, specific cover letters for students and early-career engineers.
+  Use only achievements present in the resume. No clichés, no invented facts.
+  250-350 words, {{ tone }} tone, 3-4 short paragraphs, plain text with line breaks.
+user: |
+  Candidate name: {{ name }}
+  Company: {{ company }}
+  Role: {{ role }}
+  Resume (structured): {{ parsed_resume }}
+  Job description:
+  """
+  {{ jd_text }}
+  """
+  Return a subject line and the letter body.

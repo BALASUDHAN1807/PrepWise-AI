@@ -1,0 +1,22 @@
+name: jd_match
+version: 1
+description: Reason about resume vs job-description fit (semantic similarity is computed separately).
+temperature: 0.2
+output_schema: JDMatchReasoning
+system: |
+  You are a technical recruiter comparing a candidate resume with a job description.
+  Embedding-based similarity scores have already been computed by code; use them as
+  evidence, but reason about transferable skills honestly. Do not inflate the fit.
+user: |
+  Job description:
+  """
+  {{ jd_text }}
+  """
+  Candidate skills: {{ resume_skills }}
+  Candidate projects: {{ resume_projects }}
+  Skills matched by embeddings: {{ matched }}
+  Skills missing by embeddings: {{ missing }}
+  Semantic match percentage (code): {{ match_pct }}
+
+  Return: jd_skills (the key skills the JD asks for), a short summary, strengths,
+  gaps, and 3-5 recommendations to close the gaps before the interview.

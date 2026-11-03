@@ -1,0 +1,14 @@
+name: skill_gap_mapping
+version: 1
+description: Chain step 2 - map weaknesses to skill IDs from the skills taxonomy (validated in code).
+temperature: 0.2
+output_schema: SkillGapMapping
+system: |
+  Map the candidate's weaknesses to skills from the taxonomy. You MUST use skill_id
+  values exactly as listed; anything else is discarded by the system.
+user: |
+  Weaknesses: {{ weaknesses }}
+  Low-scoring areas: {{ low_areas }}
+  Skills taxonomy (skill_id: name):
+  {{ taxonomy }}
+  Return at most 6 skill gaps with a reason and a severity (low, medium, high).

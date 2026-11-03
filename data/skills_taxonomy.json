@@ -1,0 +1,301 @@
+{
+  "arrays_strings": {
+    "name": "Arrays & Strings",
+    "category": "technical",
+    "keywords": [
+      "array",
+      "string",
+      "two pointers",
+      "sliding window",
+      "hashing",
+      "hash map",
+      "prefix sum"
+    ]
+  },
+  "linked_lists": {
+    "name": "Linked Lists",
+    "category": "technical",
+    "keywords": [
+      "linked list",
+      "pointer",
+      "node"
+    ]
+  },
+  "trees": {
+    "name": "Trees",
+    "category": "technical",
+    "keywords": [
+      "tree",
+      "bst",
+      "binary search tree",
+      "traversal"
+    ]
+  },
+  "graphs": {
+    "name": "Graphs",
+    "category": "technical",
+    "keywords": [
+      "graph",
+      "bfs",
+      "dfs",
+      "dijkstra",
+      "shortest path",
+      "topological",
+      "union find"
+    ]
+  },
+  "dynamic_programming": {
+    "name": "Dynamic Programming",
+    "category": "technical",
+    "keywords": [
+      "dynamic programming",
+      "dp",
+      "memoization",
+      "knapsack",
+      "subsequence"
+    ]
+  },
+  "complexity_analysis": {
+    "name": "Time & Space Complexity",
+    "category": "technical",
+    "keywords": [
+      "complexity",
+      "big-o",
+      "big o",
+      "optimi",
+      "brute force"
+    ]
+  },
+  "sql_databases": {
+    "name": "SQL & Databases",
+    "category": "technical",
+    "keywords": [
+      "sql",
+      "query",
+      "join",
+      "group by",
+      "database",
+      "dbms"
+    ]
+  },
+  "python": {
+    "name": "Python Programming",
+    "category": "technical",
+    "keywords": [
+      "python"
+    ]
+  },
+  "java_oop": {
+    "name": "Java & Object-Oriented Programming",
+    "category": "technical",
+    "keywords": [
+      "java",
+      "oop",
+      "object oriented",
+      "object-oriented"
+    ]
+  },
+  "web_development": {
+    "name": "Web Development",
+    "category": "technical",
+    "keywords": [
+      "web",
+      "html",
+      "css",
+      "javascript",
+      "node",
+      "api",
+      "rest",
+      "backend"
+    ]
+  },
+  "react_frontend": {
+    "name": "React & Frontend",
+    "category": "technical",
+    "keywords": [
+      "react",
+      "frontend",
+      "front-end",
+      "ui"
+    ]
+  },
+  "system_design": {
+    "name": "System Design",
+    "category": "technical",
+    "keywords": [
+      "system design",
+      "scalab",
+      "architecture",
+      "load balanc",
+      "cache"
+    ]
+  },
+  "computer_networks": {
+    "name": "Computer Networks",
+    "category": "technical",
+    "keywords": [
+      "network",
+      "tcp",
+      "http",
+      "dns",
+      "osi"
+    ]
+  },
+  "git_version_control": {
+    "name": "Git & Version Control",
+    "category": "technical",
+    "keywords": [
+      "git",
+      "github",
+      "version control",
+      "branch"
+    ]
+  },
+  "machine_learning": {
+    "name": "Machine Learning",
+    "category": "technical",
+    "keywords": [
+      "machine learning",
+      "ml",
+      "regression",
+      "classification",
+      "model training"
+    ]
+  },
+  "deep_learning": {
+    "name": "Deep Learning",
+    "category": "technical",
+    "keywords": [
+      "deep learning",
+      "neural network",
+      "cnn",
+      "transformer"
+    ]
+  },
+  "generative_ai_llms": {
+    "name": "Generative AI & LLMs",
+    "category": "technical",
+    "keywords": [
+      "generative",
+      "llm",
+      "rag",
+      "fine-tun",
+      "embedding"
+    ]
+  },
+  "prompt_engineering": {
+    "name": "Prompt Engineering",
+    "category": "technical",
+    "keywords": [
+      "prompt"
+    ]
+  },
+  "cybersecurity": {
+    "name": "Cybersecurity Fundamentals",
+    "category": "technical",
+    "keywords": [
+      "security",
+      "cyber",
+      "encryption",
+      "vulnerab"
+    ]
+  },
+  "problem_solving": {
+    "name": "Problem Solving & Coding Fluency",
+    "category": "technical",
+    "keywords": [
+      "problem solving",
+      "edge case",
+      "debug",
+      "test case",
+      "correctness"
+    ]
+  },
+  "communication": {
+    "name": "Communication & Clarity",
+    "category": "soft",
+    "keywords": [
+      "communication",
+      "clarity",
+      "clear",
+      "rambl",
+      "concise"
+    ]
+  },
+  "star_storytelling": {
+    "name": "Structured Answers (STAR)",
+    "category": "soft",
+    "keywords": [
+      "star",
+      "structure",
+      "example",
+      "storytelling",
+      "situation",
+      "result"
+    ]
+  },
+  "confidence_presence": {
+    "name": "Confidence & Presence",
+    "category": "soft",
+    "keywords": [
+      "confiden",
+      "hedg",
+      "filler",
+      "nervous",
+      "ownership"
+    ]
+  },
+  "teamwork_conflict": {
+    "name": "Teamwork & Conflict Resolution",
+    "category": "soft",
+    "keywords": [
+      "team",
+      "conflict",
+      "collaborat",
+      "disagree"
+    ]
+  },
+  "time_management": {
+    "name": "Time Management & Productivity",
+    "category": "soft",
+    "keywords": [
+      "time management",
+      "deadline",
+      "prioriti",
+      "productiv"
+    ]
+  },
+  "english_fluency": {
+    "name": "Professional English",
+    "category": "soft",
+    "keywords": [
+      "grammar",
+      "vocabulary",
+      "english",
+      "fluency",
+      "pronunciation"
+    ]
+  },
+  "self_learning": {
+    "name": "Learning How to Learn",
+    "category": "soft",
+    "keywords": [
+      "learning",
+      "self-learning",
+      "growth",
+      "upskill",
+      "curiosity"
+    ]
+  },
+  "depth_of_answer": {
+    "name": "Depth & Specifics",
+    "category": "soft",
+    "keywords": [
+      "depth",
+      "specific",
+      "metric",
+      "measurable",
+      "impact"
+    ]
+  }
+}

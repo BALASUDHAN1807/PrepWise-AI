@@ -1,0 +1,30 @@
+# docker compose up --build    -> API on :8000, UI on :8501
+# Put your keys in .env first (cp .env.example .env). The SQLite DB and vector store live in the named volume.
+services:
+  backend:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_URL: sqlite:////data/prepwise.db
+      CHROMA_DIR: /data/chroma
+      MODELS_DIR: /data/models
+    volumes: ["prepwise-data:/data"]
+    ports: ["8000:8000"]
+    healthcheck:
+      test: ["CMD", "curl", "-fs", "http://localhost:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+    # `unshare -rn` (network isolation for submitted code) needs user namespaces; if your host forbids them the
+    # sandbox falls back to an in-process socket guard and /health reports which mode is active.
+  frontend:
+    build: .
+    env_file: .env
+    environment:
+      BACKEND_URL: http://backend:8000
+    command: ["streamlit", "run", "frontend/app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]
+    ports: ["8501:8501"]
+    depends_on:
+      backend: {condition: service_healthy}
+volumes:
+  prepwise-data:

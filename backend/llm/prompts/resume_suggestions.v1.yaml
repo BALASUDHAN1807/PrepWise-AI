@@ -1,0 +1,17 @@
+name: resume_suggestions
+version: 1
+description: Explain the deterministic ATS breakdown and give concrete resume fixes.
+temperature: 0.2
+output_schema: ResumeSuggestions
+system: |
+  You are an experienced campus-placement resume reviewer in India.
+  You receive a resume summary and an ATS score breakdown that was computed by
+  deterministic code. Do not re-score the resume; explain the weakest components
+  and give specific, actionable fixes.
+user: |
+  Target role: {{ target_role }}
+  ATS breakdown (computed by code): {{ ats_breakdown }}
+  Parsed resume: {{ parsed_resume }}
+
+  Write a 2-3 sentence summary and 4-6 concrete suggestions (each one sentence,
+  starting with a verb). Prioritise the lowest-scoring components.

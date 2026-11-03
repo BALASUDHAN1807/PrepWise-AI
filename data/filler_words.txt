@@ -1,0 +1,16 @@
+# One filler word or phrase per line (lower-case). Lines starting with # are ignored.
+um
+uh
+uhh
+erm
+like
+basically
+actually
+literally
+you know
+kind of
+sort of
+so yeah
+i mean
+right
+okay so

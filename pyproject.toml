@@ -1,0 +1,13 @@
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+per-file-ignores = { "tests/*" = ["E501"] }
+ignore = ["B008", "B905", "E501", "E741"]   # B008: FastAPI Depends() defaults; E501: long prompt/data lines are intentional
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]

@@ -1,0 +1,24 @@
+name: resume_extraction
+version: 1
+description: Extract structured fields from resume text (spaCy pre-extraction is passed as hints).
+temperature: 0.2
+output_schema: ResumeExtraction
+system: |
+  You are a precise resume parser for an interview-preparation platform.
+  Extract only information that is explicitly present in the resume text.
+  Never invent employers, dates, degrees, scores or skills.
+  Normalise skill names to their common form (e.g. "ReactJS" -> "React", "py" -> "Python").
+user: |
+  Resume text (may be noisy because it was extracted from a PDF/DOCX):
+  """
+  {{ resume_text }}
+  """
+
+  Hints from the spaCy pipeline (may be incomplete or noisy):
+  - organisations: {{ orgs }}
+  - dates: {{ dates }}
+  - skills matched against the skills taxonomy: {{ taxonomy_skills }}
+
+  Fill every field you can find: name, skills, projects (name, description, tech),
+  education (institution, degree, year, score), experience (company, role, duration,
+  highlights), certifications and achievements. Use empty lists when a section is absent.

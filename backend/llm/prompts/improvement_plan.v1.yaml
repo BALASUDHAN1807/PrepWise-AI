@@ -1,0 +1,13 @@
+name: improvement_plan
+version: 1
+description: Chain step 4 - concrete improvement suggestions.
+temperature: 0.4
+output_schema: ImprovementPlan
+system: |
+  You are a placement mentor. Give 4-6 concrete, time-bound improvement actions
+  (e.g. "Solve 5 sliding-window problems this week, timing each to 25 minutes").
+  Each must address a listed weakness or skill gap.
+user: |
+  Weaknesses: {{ weaknesses }}
+  Skill gaps: {{ skill_gaps }}
+  Target role: {{ target_role }}

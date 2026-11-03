@@ -1,0 +1,344 @@
+[
+  {
+    "id": "nptel-pdsa-python",
+    "title": "Programming, Data Structures And Algorithms Using Python",
+    "platform": "NPTEL",
+    "skills": [
+      "python",
+      "arrays_strings",
+      "linked_lists",
+      "trees",
+      "graphs",
+      "complexity_analysis",
+      "problem_solving"
+    ],
+    "level": "beginner",
+    "url": "https://nptel.ac.in/courses/106106145",
+    "provider": "Chennai Mathematical Institute"
+  },
+  {
+    "id": "nptel-java",
+    "title": "Programming in Java",
+    "platform": "NPTEL",
+    "skills": [
+      "java_oop"
+    ],
+    "level": "beginner",
+    "url": "https://nptel.ac.in/courses/106105191",
+    "provider": "IIT Kharagpur"
+  },
+  {
+    "id": "nptel-intro-ml",
+    "title": "Introduction to Machine Learning",
+    "platform": "NPTEL",
+    "skills": [
+      "machine_learning"
+    ],
+    "level": "intermediate",
+    "url": "https://nptel.ac.in/courses/106106139",
+    "provider": "IIT Madras"
+  },
+  {
+    "id": "nptel-joy-of-computing",
+    "title": "The Joy of Computing using Python",
+    "platform": "NPTEL",
+    "skills": [
+      "python",
+      "problem_solving"
+    ],
+    "level": "beginner",
+    "url": "https://nptel.ac.in/courses/106106182",
+    "provider": "IIT Ropar"
+  },
+  {
+    "id": "nptel-dbms",
+    "title": "Data Base Management System",
+    "platform": "NPTEL",
+    "skills": [
+      "sql_databases"
+    ],
+    "level": "intermediate",
+    "url": "https://nptel.ac.in/courses/106105175",
+    "provider": "IIT Kharagpur"
+  },
+  {
+    "id": "nptel-soft-skill-development",
+    "title": "Soft Skill Development",
+    "platform": "NPTEL",
+    "skills": [
+      "communication",
+      "teamwork_conflict",
+      "confidence_presence"
+    ],
+    "level": "beginner",
+    "url": "https://nptel.ac.in/courses/109105110",
+    "provider": "IIT Kharagpur"
+  },
+  {
+    "id": "nptel-enhancing-soft-skills",
+    "title": "Enhancing Soft Skills and Personality",
+    "platform": "NPTEL",
+    "skills": [
+      "communication",
+      "confidence_presence",
+      "english_fluency"
+    ],
+    "level": "beginner",
+    "url": "https://nptel.ac.in/courses/109104115",
+    "provider": "IIT Kanpur"
+  },
+  {
+    "id": "coursera-ml-specialization",
+    "title": "Machine Learning Specialization",
+    "platform": "Coursera",
+    "skills": [
+      "machine_learning"
+    ],
+    "level": "beginner",
+    "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+    "provider": "Stanford Online & DeepLearning.AI"
+  },
+  {
+    "id": "coursera-dsa-ucsd",
+    "title": "Data Structures and Algorithms Specialization",
+    "platform": "Coursera",
+    "skills": [
+      "arrays_strings",
+      "linked_lists",
+      "trees",
+      "graphs",
+      "dynamic_programming",
+      "complexity_analysis"
+    ],
+    "level": "intermediate",
+    "url": "https://www.coursera.org/specializations/data-structures-algorithms",
+    "provider": "University of California San Diego"
+  },
+  {
+    "id": "coursera-algorithms-part1",
+    "title": "Algorithms, Part I",
+    "platform": "Coursera",
+    "skills": [
+      "arrays_strings",
+      "trees",
+      "complexity_analysis"
+    ],
+    "level": "intermediate",
+    "url": "https://www.coursera.org/learn/algorithms-part1",
+    "provider": "Princeton University"
+  },
+  {
+    "id": "coursera-python-everybody",
+    "title": "Python for Everybody Specialization",
+    "platform": "Coursera",
+    "skills": [
+      "python",
+      "sql_databases"
+    ],
+    "level": "beginner",
+    "url": "https://www.coursera.org/specializations/python",
+    "provider": "University of Michigan"
+  },
+  {
+    "id": "coursera-sql-data-science",
+    "title": "SQL for Data Science",
+    "platform": "Coursera",
+    "skills": [
+      "sql_databases"
+    ],
+    "level": "beginner",
+    "url": "https://www.coursera.org/learn/sql-for-data-science",
+    "provider": "University of California, Davis"
+  },
+  {
+    "id": "coursera-deep-learning-spec",
+    "title": "Deep Learning Specialization",
+    "platform": "Coursera",
+    "skills": [
+      "deep_learning",
+      "machine_learning"
+    ],
+    "level": "intermediate",
+    "url": "https://www.coursera.org/specializations/deep-learning",
+    "provider": "DeepLearning.AI"
+  },
+  {
+    "id": "coursera-learning-how-to-learn",
+    "title": "Learning How to Learn: Powerful mental tools to help you master tough subjects",
+    "platform": "Coursera",
+    "skills": [
+      "self_learning",
+      "time_management"
+    ],
+    "level": "beginner",
+    "url": "https://www.coursera.org/learn/learning-how-to-learn",
+    "provider": "Deep Teaching Solutions"
+  },
+  {
+    "id": "coursera-google-networking",
+    "title": "The Bits and Bytes of Computer Networking",
+    "platform": "Coursera",
+    "skills": [
+      "computer_networks"
+    ],
+    "level": "beginner",
+    "url": "https://www.coursera.org/learn/computer-networking",
+    "provider": "Google"
+  },
+  {
+    "id": "coursera-google-git-github",
+    "title": "Introduction to Git and GitHub",
+    "platform": "Coursera",
+    "skills": [
+      "git_version_control"
+    ],
+    "level": "beginner",
+    "url": "https://www.coursera.org/learn/introduction-git-github",
+    "provider": "Google"
+  },
+  {
+    "id": "coursera-genai-llms",
+    "title": "Generative AI with Large Language Models",
+    "platform": "Coursera",
+    "skills": [
+      "generative_ai_llms",
+      "deep_learning"
+    ],
+    "level": "intermediate",
+    "url": "https://www.coursera.org/learn/generative-ai-with-llms",
+    "provider": "DeepLearning.AI & AWS"
+  },
+  {
+    "id": "coursera-duke-java",
+    "title": "Java Programming: Solving Problems with Software",
+    "platform": "Coursera",
+    "skills": [
+      "java_oop",
+      "problem_solving"
+    ],
+    "level": "beginner",
+    "url": "https://www.coursera.org/learn/java-programming",
+    "provider": "Duke University"
+  },
+  {
+    "id": "coursera-google-cybersecurity",
+    "title": "Foundations of Cybersecurity",
+    "platform": "Coursera",
+    "skills": [
+      "cybersecurity"
+    ],
+    "level": "beginner",
+    "url": "https://www.coursera.org/learn/foundations-of-cybersecurity",
+    "provider": "Google"
+  },
+  {
+    "id": "coursera-prompt-engineering",
+    "title": "Prompt Engineering for ChatGPT",
+    "platform": "Coursera",
+    "skills": [
+      "prompt_engineering",
+      "generative_ai_llms"
+    ],
+    "level": "beginner",
+    "url": "https://www.coursera.org/learn/prompt-engineering",
+    "provider": "Vanderbilt University"
+  },
+  {
+    "id": "coursera-work-smarter",
+    "title": "Work Smarter, Not Harder: Time Management for Personal & Professional Productivity",
+    "platform": "Coursera",
+    "skills": [
+      "time_management"
+    ],
+    "level": "beginner",
+    "url": "https://www.coursera.org/learn/work-smarter-not-harder",
+    "provider": "University of California, Irvine"
+  },
+  {
+    "id": "coursera-speak-english-professionally",
+    "title": "Speak English Professionally: In Person, Online & On the Phone",
+    "platform": "Coursera",
+    "skills": [
+      "english_fluency",
+      "communication",
+      "confidence_presence"
+    ],
+    "level": "intermediate",
+    "url": "https://www.coursera.org/learn/speak-english-professionally",
+    "provider": "Georgia Institute of Technology"
+  },
+  {
+    "id": "coursera-neural-networks-dl",
+    "title": "Neural Networks and Deep Learning",
+    "platform": "Coursera",
+    "skills": [
+      "deep_learning"
+    ],
+    "level": "intermediate",
+    "url": "https://www.coursera.org/learn/neural-networks-deep-learning",
+    "provider": "DeepLearning.AI"
+  },
+  {
+    "id": "coursera-ucsd-oop-java",
+    "title": "Object Oriented Programming in Java",
+    "platform": "Coursera",
+    "skills": [
+      "java_oop",
+      "linked_lists"
+    ],
+    "level": "intermediate",
+    "url": "https://www.coursera.org/learn/object-oriented-java",
+    "provider": "University of California San Diego"
+  },
+  {
+    "id": "udemy-sql-bootcamp",
+    "title": "The Complete SQL Bootcamp: Go from Zero to Hero",
+    "platform": "Udemy",
+    "skills": [
+      "sql_databases"
+    ],
+    "level": "beginner",
+    "url": "https://www.udemy.com/course/the-complete-sql-bootcamp/",
+    "provider": "Udemy"
+  },
+  {
+    "id": "udemy-python-bootcamp",
+    "title": "The Complete Python Bootcamp",
+    "platform": "Udemy",
+    "skills": [
+      "python",
+      "problem_solving"
+    ],
+    "level": "beginner",
+    "url": "https://www.udemy.com/course/complete-python-bootcamp/",
+    "provider": "Udemy"
+  },
+  {
+    "id": "udemy-react-complete-guide",
+    "title": "React - The Complete Guide (incl Hooks, React Router, Redux)",
+    "platform": "Udemy",
+    "skills": [
+      "react_frontend",
+      "web_development"
+    ],
+    "level": "intermediate",
+    "url": "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+    "provider": "Udemy"
+  },
+  {
+    "id": "udemy-js-dsa-masterclass",
+    "title": "JavaScript Algorithms and Data Structures Masterclass",
+    "platform": "Udemy",
+    "skills": [
+      "arrays_strings",
+      "linked_lists",
+      "trees",
+      "graphs",
+      "dynamic_programming",
+      "complexity_analysis"
+    ],
+    "level": "intermediate",
+    "url": "https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/",
+    "provider": "Udemy"
+  }
+]

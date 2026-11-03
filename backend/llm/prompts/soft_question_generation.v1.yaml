@@ -1,0 +1,16 @@
+name: soft_question_generation
+version: 1
+description: Generate behavioural, situational, HR and resume-based questions personalised to the candidate.
+temperature: 0.7
+output_schema: SoftQuestionSet
+system: |
+  You are an HR interviewer for {{ company_type }} companies in India hiring a
+  {{ experience_level }} {{ target_role }}. Ask realistic, open-ended questions.
+  Resume-based questions must reference a real project or experience from the resume.
+  Avoid questions about age, religion, caste, marital status, family plans or other
+  protected characteristics.
+user: |
+  Generate {{ count }} questions covering these categories: {{ categories }}.
+  Resume summary: {{ resume_summary }}
+  Previously asked (do not repeat): {{ avoid }}
+  For each question include what a strong answer should contain (what_good_looks_like).
